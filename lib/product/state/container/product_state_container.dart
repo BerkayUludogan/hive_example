@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:hive_example/product/cache/hive/hive_cache_manager.dart';
-import 'package:hive_example/product/product_cache.dart';
+import 'package:hive_example/product/cache/product_cache.dart';
 
 final class ProductStateContainer {
   const ProductStateContainer._();

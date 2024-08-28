@@ -1,10 +1,10 @@
-import 'package:hive/hive.dart';
 import 'package:hive_example/product/cache/core/cache_operation.dart';
 import 'package:hive_example/product/cache/core/model/cache_model.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 part '../core/mixin/cache_manager_mixin.dart';
 
-final class HiveOperation<T extends CacheModel<T>> extends CacheOperation<T>
+final class HiveCacheOperation<T extends CacheModel> extends CacheOperation<T>
     with CacheManagerMixin<T> {
   @override
   void add(T item) {

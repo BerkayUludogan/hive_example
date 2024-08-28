@@ -1,7 +1,7 @@
 import 'package:hive_example/product/cache/core/index.dart';
 import 'package:hive_example/product/cache/hive/hive_adapter_id.dart';
-import 'package:hive_example/product/cache/hive/hive_operation.dart';
-import 'package:hive_example/product/model/user.dart';
+import 'package:hive_example/product/cache/hive/hive_cache_operation.dart';
+import 'package:hive_example/product/service/model/user.dart';
 
 final class ProductCache {
   ProductCache({required CacheManager cacheManager})
@@ -20,5 +20,6 @@ final class ProductCache {
     );
   }
 
-  late final HiveOperation<User> userCacheOperation = HiveOperation<User>();
+  late final HiveCacheOperation<User> userCacheOperation =
+      HiveCacheOperation<User>();
 }

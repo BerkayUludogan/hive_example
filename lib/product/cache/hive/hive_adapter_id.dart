@@ -1,5 +1,5 @@
 enum HiveAdapterId {
-  user(10);
+  user(1);
 
   final int value;
 

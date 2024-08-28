@@ -16,6 +16,8 @@ dependencies:
   json_serializable: ^6.8.0
   get_it: ^7.7.0
   vexana: ^4.1.0
+  dio_nexus: ^0.2.2
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

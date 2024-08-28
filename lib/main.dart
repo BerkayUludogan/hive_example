@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:hive_example/home/home.dart';
+import 'package:hive_example/product/init/application_initialize.dart';
 
-void main() => runApp(const MyApp());
+void main() async {
+  await ApplicationInitialize().make();
+  runApp(const _MyApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class _MyApp extends StatelessWidget {
+  const _MyApp();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      home: HomeView(),
     );
   }
 }

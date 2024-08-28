@@ -11,7 +11,9 @@ final class ApplicationInitialize {
 
   Future<void> _hive() async {
     ProductStateContainer.setup();
+
     final productCache = ProductStateItems.productCacheManager;
+
     await productCache.init();
     productCache.register();
     await productCache.userCacheOperation.open();
