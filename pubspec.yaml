@@ -12,12 +12,19 @@ dependencies:
   hive_flutter: ^1.1.0
   path_provider: ^2.1.4
 
-  json_annotation: ^4.9.0
-  json_serializable: ^6.8.0
-  get_it: ^7.7.0
+  # Network Dependencies
   vexana: ^4.1.0
   dio_nexus: ^0.2.2
+
+  # Core
+  get_it: ^7.7.0
   equatable: ^2.0.5
+
+  # State
+  flutter_bloc: ^8.1.6
+
+  json_annotation: ^4.9.0
+  json_serializable: ^6.8.0
 
 dev_dependencies:
   flutter_test:

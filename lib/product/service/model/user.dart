@@ -21,7 +21,14 @@ class User extends INetworkModel<User> with EquatableMixin, CacheModel<User> {
   final String? first_name;
   final String? last_name;
   final String? avatar;
+  @override
+  String get leading => avatar ?? '';
 
+  @override
+  String get title => '$first_name $last_name';
+
+  @override
+  String get subtitle => email ?? '';
   @override
   User fromJson(Map<String, dynamic> json) => User.fromJson(json);
 

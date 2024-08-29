@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hive_example/home/home.dart';
+import 'package:hive_example/home/view/home_view.dart';
 import 'package:hive_example/product/init/application_initialize.dart';
 
 void main() async {
