@@ -6,6 +6,8 @@ class SharedCacheOperations {
 
   T? read<T>(SharedKey key) => _prefs.get(key.name) as T?;
 
+  Future<void> clear() => _prefs.clear();
+
   Future<void> write(SharedKey key, Object value) async {
     switch (value) {
       case int:

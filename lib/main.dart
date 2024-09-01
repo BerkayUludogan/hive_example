@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hive_example/home/view/home_view.dart';
+import 'package:hive_example/feature/auth/register/view/register_view.dart';
 import 'package:hive_example/product/init/application_initialize.dart';
 
 void main() async {
@@ -15,7 +15,7 @@ class _MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: HomeView(),
+      home: RegisterView(),
     );
   }
 }
