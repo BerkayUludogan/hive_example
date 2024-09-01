@@ -15,6 +15,7 @@ dependencies:
   # Network Dependencies
   vexana: ^4.1.0
   dio_nexus: ^0.2.2
+  shared_preferences: ^2.3.2
 
   # Core
   get_it: ^7.7.0

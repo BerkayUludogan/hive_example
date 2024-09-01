@@ -6,6 +6,8 @@ import 'package:hive_example/home/view_model/home_view_model.dart';
 import 'package:hive_example/product/service/model/user.dart';
 import 'package:hive_example/product/widget/custom_separeted.dart';
 
+part '../widget/home_bloc_listtile.dart';
+
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -20,28 +22,9 @@ class _HomeViewState extends State<HomeView> with HomeViewMixin {
       body: BlocProvider(
         create: (context) => homeViewModel,
         child: BlocBuilder<HomeViewModel, HomeState>(
-          builder: (context, state) => _body(),
+          builder: (context, state) => const HomeBlocListtile(),
         ),
       ),
-    );
-  }
-
-  Widget _body() {
-    return BlocBuilder<HomeViewModel, HomeState>(
-      builder: (context, state) {
-        return !state.loading && mounted
-            ? state.users != null
-                ? CustomSeparated(
-                    items: state.users!,
-                    onPressed: (User item) {},
-                  )
-                : const Center(
-                    child: Text('Kullanıcılar yok'),
-                  )
-            : const Center(
-                child: CircularProgressIndicator(),
-              );
-      },
     );
   }
 }

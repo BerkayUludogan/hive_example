@@ -4,8 +4,9 @@ import 'package:hive_example/product/cache/hive/hive_cache_operation.dart';
 import 'package:hive_example/product/service/model/user.dart';
 
 final class ProductCache {
-  ProductCache({required CacheManager cacheManager})
-      : _cacheManager = cacheManager;
+  ProductCache({
+    required CacheManager cacheManager,
+  }) : _cacheManager = cacheManager;
 
   final CacheManager _cacheManager;
 

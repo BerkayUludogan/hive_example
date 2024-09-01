@@ -1,0 +1,1 @@
+enum SharedKey { token }
