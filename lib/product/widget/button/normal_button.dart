@@ -10,8 +10,9 @@ class NormalButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
+        textStyle: Theme.of(context).textTheme.titleMedium,
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Center(
         child: Text(
           text,

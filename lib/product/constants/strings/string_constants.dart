@@ -6,4 +6,8 @@ final class StringConstants {
   static const yourUsername = 'Kullanıcı Adınız';
   static const enterYourPassword = 'Şifrenizi Giriniz';
   static const signUp = 'Kayıt Ol';
+
+  /// Login View
+  static const loginView = 'Giriş Ekranı';
+  static const signIn = 'Giriş Yap';
 }
