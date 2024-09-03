@@ -1,18 +1,25 @@
 part of '../view/register_view.dart';
 
 class ColumnTextformfieldButton extends StatelessWidget {
-  const ColumnTextformfieldButton({super.key});
-
+  ColumnTextformfieldButton({
+    required this.usernameController,
+    required this.passwordController,
+    super.key,
+  });
+  TextEditingController usernameController;
+  TextEditingController passwordController;
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AuthTextformfield(
+          controller: usernameController,
           hintText: StringConstants.yourUsername,
         ),
         const SizedBox().hight,
         AuthTextformfield(
+          controller: passwordController,
           hintText: StringConstants.enterYourPassword,
         ),
         const SizedBox().hight,
@@ -20,7 +27,6 @@ class ColumnTextformfieldButton extends StatelessWidget {
           hintText: StringConstants.enterYourPassword,
         ),
         const SizedBox().hight,
-        NormalButton(text: StringConstants.signUp, onPressed: () {}),
       ],
     );
   }

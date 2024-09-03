@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hive_example/feature/auth/register/view_model/register_view_model.dart';
+import 'package:hive_example/feature/auth/register/mixin/register_view_mixin.dart';
 import 'package:hive_example/feature/auth/widget/auth_textformfield.dart';
 import 'package:hive_example/product/constants/extensions/sizedbox_extension.dart';
 import 'package:hive_example/product/constants/strings/string_constants.dart';
@@ -15,7 +15,7 @@ class RegisterView extends StatefulWidget {
   State<RegisterView> createState() => _RegisterViewState();
 }
 
-class _RegisterViewState extends RegisterViewModel {
+class _RegisterViewState extends State<RegisterView> with RegisterViewMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +28,22 @@ class _RegisterViewState extends RegisterViewModel {
   }
 
   Center _body() {
-    return const Center(
+    return Center(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ColumnTextformfieldButton(),
+            ColumnTextformfieldButton(
+              usernameController: registerViewModel.usernameController,
+              passwordController: registerViewModel.passwordController,
+            ),
+            NormalButton(
+              text: StringConstants.signUp,
+              onPressed: () {
+                registerViewModel.saveUserToCache();
+              },
+            ),
           ],
         ),
       ),

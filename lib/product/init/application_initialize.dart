@@ -17,5 +17,6 @@ final class ApplicationInitialize {
     await productCache.init();
     productCache.register();
     await productCache.userCacheOperation.open();
+    await productCache.registerCacheOperation.open();
   }
 }

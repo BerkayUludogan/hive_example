@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
 final class AuthTextformfield extends StatelessWidget {
-  AuthTextformfield({super.key, this.hintText});
+  AuthTextformfield({super.key, this.hintText, this.controller});
   String? hintText;
+  TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(hintText: hintText, filled: true),
+      controller: controller,
+      decoration: InputDecoration(
+        hintText: hintText,
+        filled: true,
+      ),
     );
   }
 }
